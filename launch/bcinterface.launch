@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="bcinterface" type="Classifier.py" name="Classifier" output="screen"/>
+  <!--node pkg="abb_catkin" type="broadcaster.py" name="camera_broadcaster" /-->
+	<node pkg="bcinterface" type="feature_selection.py" name="PCA" output="screen"/>
+  <node pkg="bcinterface" type="feature_extraction.py" name="PWELCH" output="screen"/>
+  <node pkg="bcinterface" type="Pre-processing_node.py" name="preprocessing" output="screen"/>
+  <node pkg="bcinterface" type="listener.py" name="epoching" output="screen"/>
+  <node pkg="bcinterface" type="read_1ch_openBCI.py" name="acquiring_data" output="screen"/>
+</launch>
